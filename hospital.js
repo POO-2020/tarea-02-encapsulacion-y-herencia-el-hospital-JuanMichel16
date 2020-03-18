@@ -27,7 +27,23 @@ export default class Hospital {
 
     _encontrarIndiceDoctor(doctor){
         let indice = this._doctores.findIndex((e => e.esIgualA(doctor)))
-        return indice
+        return indice;
+    }
+
+    _encontrarDoctor(doctor){
+        let indice = this._doctores.find((e => e.esIgualA(doctor)))
+        return indice;
+    }
+
+    eliminar(doctor){
+        let indice = this._encontrarIndiceDoctor(doctor)
+
+        if(indice < 0){
+            return false
+        }
+
+        this._doctores.splice(indice, 1)
+        return true
     }
 
     registrarCita(citas) {

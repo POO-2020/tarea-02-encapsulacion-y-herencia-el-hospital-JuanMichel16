@@ -8,7 +8,7 @@ export default class Paciente {
     }
 
     getPerfil() {
-        return `${this._nombre.getNombreCompleto()}, Nacimiento: ${this._fechaNacimiento.getFecha()}, Telefono: ${this._telefono}`
+        return `${this._nombre.getApellidoNombre()}, Nacimiento: ${this._fechaNacimiento.getFecha()}, Telefono: ${this._telefono}`
     }
 
     getNombreCompleto() {
