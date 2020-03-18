@@ -146,8 +146,13 @@ class Main {
         console.log(this.nombre1.getIniciales());
     }
 
+    probarDoctor() {
+        console.log(this.doctor2.getPerfil())
+    }
+
     probarPaciente() {
         console.log(`Paciente: ${this.paciente1.getPerfil()}`);
+        console.log(this.pacienteAsegurado1.getPerfil())
     }
 
     probarCita() {
@@ -158,7 +163,8 @@ class Main {
         this.hospital1.registrarDoctor(this.doctor1); //Lo que esta dentro del parentesis "this.doctor1" es el doctor que quiero registrar
         this.hospital1.listarDoctores();
         this.hospital2._encontrarIndiceDoctor(this.doctor2)
-        this.hospital2._encontrarDoctor(this.doctor1)
+        this.hospital2._encontrarDoctor(this.doctor2)
+        this.hospital2.eliminar(this.doctor2)
 
         this.hospital1.registrarCita(this.cita1);
         this.hospital1.registrarCita(this.cita2);
@@ -171,6 +177,8 @@ let probar = new Main();
 probar.probarFechaNacimiento()
 probar.probarTiempo();
 probar.probarNombre();
+probar.probarDoctor();
 probar.probarPaciente();
 probar.probarCita();
 probar.probarHospital();
+probar.pro

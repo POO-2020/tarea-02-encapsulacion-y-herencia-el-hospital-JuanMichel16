@@ -1,3 +1,6 @@
+import Doctor from "./doctor.js"
+import Cita from "./cita.js"
+
 export default class Hospital {
 
     /**
