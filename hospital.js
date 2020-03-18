@@ -8,7 +8,7 @@ export default class Hospital {
      * @param {*} citas 
      */
 
-    constructor(nombre, direccion) {
+    constructor({nombre, direccion}) {
         this._nombre = nombre;
         this.direccion = direccion;
         this._doctores = [];
@@ -23,6 +23,11 @@ export default class Hospital {
         this._doctores.forEach((imprimirDoctor,i) => {
             console.log(`Doctor ${i + 1}. ${imprimirDoctor.getPerfil()}`)
         })
+    }
+
+    _encontrarIndiceDoctor(doctor){
+        let indice = this._doctores.findIndex((e => e.esIgualA(doctor)))
+        return indice
     }
 
     registrarCita(citas) {

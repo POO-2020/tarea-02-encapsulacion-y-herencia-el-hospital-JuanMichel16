@@ -1,7 +1,7 @@
 export default class Doctor {
 
 
-    constructor(nombre, especialidad, telefono, cedula) {
+    constructor({nombre, especialidad, telefono, cedula}) {
         this._nombre = nombre
         this._especialidad = especialidad
         this._telefono = telefono
@@ -14,5 +14,13 @@ export default class Doctor {
 
     getApellidoPaterno() {
         return `${this._nombre.getApellidoPaterno()}`
-}
+    }
+
+    esIgualA(doctor){
+        if(doctor.getCedula() === this._cedulas){
+            return true
+        }else{
+            return false
+        }
+    }
 }
