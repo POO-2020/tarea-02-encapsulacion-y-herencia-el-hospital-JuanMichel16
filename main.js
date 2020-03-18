@@ -181,4 +181,3 @@ probar.probarDoctor();
 probar.probarPaciente();
 probar.probarCita();
 probar.probarHospital();
-probar.pro
